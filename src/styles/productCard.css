@@ -1,0 +1,39 @@
+.productCard{
+    width: 386px;
+    height: auto;
+    margin-bottom: 119px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.productCard a{
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.productCard-img{
+    width: auto;
+    height: 445px;
+}
+
+.productCard:hover{
+    background-color: white;
+    box-shadow: 0px 0px 77px -37px;
+}
+.addToCartSvg{
+    background: url('../svg/addToCart.svg') 100%/100% no-repeat;
+    position: absolute;
+    height: 53px;
+    width: 53px;
+    margin-top: 421px;
+    margin-left: 231px;
+    transition: 0.1s;
+}
+
+.addToCartSvg:hover{
+    height: 67px;
+    width: 67px;
+}

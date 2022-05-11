@@ -1,25 +1,53 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.css'
+import { useQuery } from '@apollo/client'
+import { useEffect } from 'react'
+import { connect } from 'react-redux'
+import Body from './components/body'
+import { GET_ALL_PRODUCTS } from './gql/gql'
+import { initProducts } from './reducers/productsReducer'
+import Header from './components/header/Header'
 
-function App() {
+
+
+
+const App = ({init}) => {
+
+  const { data } = useQuery(GET_ALL_PRODUCTS)
+
+  useEffect(() => {
+    if(data){
+      init(data.categories)
+    }
+  }, [data, init])
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      {data
+       ?  <div>
+            <Header />
+            <Body categories={data.categories} />
+          </div>
+       : <h1>error</h1> }
     </div>
-  );
+  )
 }
 
-export default App;
+
+const mapStateToPtops = (state) => {
+  return {
+    currency: state.currencyReducer
+  }
+}
+
+
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    init: (data) => {
+      dispatch(initProducts(data))
+    }
+  }
+}
+
+export default connect(mapStateToPtops, mapDispatchToProps)(App)

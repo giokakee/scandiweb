@@ -1,0 +1,6 @@
+.categoryPage {
+    display: grid;
+    grid-template-columns: 387px 387px 387px;
+    grid-template-rows: auto auto auto;
+    justify-content: space-between;
+}
