@@ -31,9 +31,18 @@
     margin-top: 421px;
     margin-left: 231px;
     transition: 0.1s;
+    cursor: pointer;
 }
 
 .addToCartSvg:hover{
     height: 67px;
     width: 67px;
+}
+
+.price{
+    font-family: 'Raleway';
+font-style: normal;
+font-weight: 600;
+font-size: 18px;
+line-height: 160%;
 }

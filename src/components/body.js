@@ -1,10 +1,9 @@
 import { Component } from "react";
-import { Route, Routes, Navigate, Link } from "react-router-dom";
+import { Route, Routes, Navigate } from "react-router-dom";
 import Categories from "./body.categories";
 import SingleProduct from "./productPage/singleProduct";
+import ProductCart from './cart/cart'
 
-
-import ProductCart from './cart'
 
 class Body extends Component {
 

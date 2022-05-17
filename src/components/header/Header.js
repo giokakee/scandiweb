@@ -4,7 +4,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { GET_CATEGORIES } from "../../gql/gql";
 import { connect } from 'react-redux';
 import { changeCurrency } from '../../reducers/currencyReducer';
-import Cart from './cart';
+import Cart from './headerCart';
 import Currency from './currency'
 
 const Header = () => {

@@ -1,0 +1,84 @@
+.headerCartSizeAttribute{
+    display: flex;
+    flex-direction: row;
+}
+
+.headerCartSizeItem{
+    border: 1px solid black;
+    height: 23px;
+    width: 23px;
+    margin-right: 13px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.headerCartSizeItem p{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 160%;
+}
+
+.headerCartChosenSize{
+    background-color: black;
+    color: white;
+}
+
+.headerCartColorAttribute{
+    display: flex;
+    align-items: center;
+    height: 43px;
+    margin-bottom: 38px;
+}
+.headerCartColorItem{
+    height: 17px;
+    width: 17px;
+    padding: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.headerCartColorItem div{
+    height: 15px;
+    width: 15px;
+    border: 1px solid rgb(160, 142, 142);
+}
+
+.headerCartChosenColor{
+    border: 2px solid #5ECE7B;
+    padding: 1px;
+}
+
+.headerCartCapacityItem, .headerCartPortAttribute, .headerCartTouchIdAttribute  {
+    display: flex;
+    align-items: center;
+    margin-bottom: 38px;
+}
+.headerCartCapacityItem  p, .headerCartPortAttribute p, .headerCartTouchIdAttribute p {
+    font-size: 11px;
+}
+
+.headerCartCapacityItem div, .headerCartPortAttribute div, .headerCartTouchIdAttribute div {
+    width: 25px;
+    margin-right: 10px;
+    border: 1px solid rgb(160, 142, 142);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 25px;
+}
+
+.headerCartChosenCapacity, .headerCartChosenValue {
+    background-color: black;
+    color: white;
+}
+
+.headerCartAttributeName{
+    font-family: 'Roboto Condensed';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 18px;
+}

@@ -2,9 +2,6 @@ const productsReducer = (state = [], action) => {
     switch(action.type){
         case 'INIT_PRODUCTS':
             return action.data
-
-
-
         default:
             return state
     }

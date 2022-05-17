@@ -62,11 +62,10 @@ class Currency extends Component {
         return(
             <OutsideClickHandler onOutsideClick={outsideClickHandler}>
                 <div className='header-symbol'>
-                    <div>
+                    <div style={{display: 'flex'}}>
                             <span style={{cursor: 'pointer', transition:'2s'}} onClick={() => this.setState({open: true}) }>{symbol}</span>
-                            {open 
-                                ? <span style={{cursor: 'pointer', transition:'2s' }} onClick={() => close()}>x</span> 
-                                : <span style={{cursor: 'pointer', transition:'2s'}} onClick={() => this.setState({open: true})}>^</span>}
+                            {open   ? <span style={{cursor: 'pointer', transition:'0.3s' }} onClick={() => close()} className='currencyClose'></span> 
+                                    : <span style={{cursor: 'pointer', transition:'0.3s'}} onClick={() => this.setState({open: true})} className='currencyOpen'></span>}
                     </div>
 
                     {open && <div style={{position: 'absolute', marginLeft: '-30px'}} className='symbol'>

@@ -12,7 +12,8 @@ class SingleProduct extends Component {
         super(props)
 
         this.state = {
-            imgNum: 0
+            imgNum: 0,
+            attributes: {}
         }
     }
 
@@ -23,6 +24,18 @@ class SingleProduct extends Component {
         
         const { product, add, currency } = this.props
         const priceToShow = product.prices.find(price => price.currency.symbol === currency)
+
+        const addProduct = () => {
+            let productToAdd = {...product, chosenAttributes: this.state.attributes, amount: 1 }
+
+            if(Object.keys(product.attributes).length === Object.keys(this.state.attributes).length){
+                add(productToAdd)
+            }else{
+                alert('Choose attributes')
+            }
+
+
+        }
 
         return(
             <div className='singleProduct'>
@@ -55,7 +68,7 @@ class SingleProduct extends Component {
                     <div>
                         {product.attributes.map((attribute, i) => {
                             return(
-                                    <Attribute key={i} attribute={attribute} />
+                                    <Attribute key={i} attribute={attribute} id={product.id} setChosenAttribute={(data) => this.setState(data)} />
                             )
                         })}
                     </div>
@@ -68,7 +81,7 @@ class SingleProduct extends Component {
 
 
 
-                    <button className='addToCartButton' onClick={() => add(product)}>add to cart</button>
+                    <button className='addToCartButton' onClick={addProduct}>add to cart</button>
                     <div className='description' dangerouslySetInnerHTML={{__html: product.description}}></div>
                 </div>
             </div>
