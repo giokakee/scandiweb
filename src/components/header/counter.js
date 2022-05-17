@@ -3,15 +3,6 @@ import { connect } from "react-redux";
 import { decreaseAmount, increaseAmount } from "../../reducers/cartReducer";
 
 class Counter extends Component {
-    constructor(props){
-        super(props)
-
-        this.state = {
-            count: 1
-        }
-    }
-
-
 
     render(){
 

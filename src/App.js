@@ -6,6 +6,7 @@ import Body from './components/body'
 import { GET_ALL_PRODUCTS } from './gql/gql'
 import { initProducts } from './reducers/productsReducer'
 import Header from './components/header/Header'
+import { useLocation } from 'react-router-dom'
 
 
 
@@ -13,6 +14,7 @@ import Header from './components/header/Header'
 const App = ({init, cart}) => {
 
   const { data, loading, error, } = useQuery(GET_ALL_PRODUCTS)
+  const { pathname } = useLocation()
 
   useEffect(() => {
     if(data){
@@ -24,15 +26,14 @@ const App = ({init, cart}) => {
     window.localStorage.setItem('cart', JSON.stringify(cart))
   }, [cart])
   
+
   return (
     <div>
       {data &&<div>
-                <Header />
+                <Header categories={data.categories} pathname={pathname} />
                 <Body categories={data.categories} />
               </div>}
-      {loading && <div>
-                    <h1>loading</h1>
-                  </div>}
+      {loading && <div className='spin'></div>}
       {error && <div>
                   <h1>error</h1>
                 </div>}

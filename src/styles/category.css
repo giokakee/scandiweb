@@ -4,3 +4,23 @@
     grid-template-rows: auto auto auto;
     justify-content: space-between;
 }
+
+
+@media only screen and (max-width: 1200px) {
+    .categoryPage {
+        display: grid;
+        grid-template-columns: 387px 387px;
+        grid-template-rows: auto auto auto;
+        justify-content: space-between;
+    }
+  }
+
+  
+@media only screen and (max-width: 800px) {
+    .categoryPage {
+        display: grid;
+        grid-template-columns:  387px;
+        grid-template-rows: auto auto auto;
+        justify-content: center;
+    }
+  }

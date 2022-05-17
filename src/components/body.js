@@ -8,16 +8,17 @@ import ProductCart from './cart/cart'
 class Body extends Component {
 
     render(){
+        const { categories } = this.props
         return(
             <Routes>
-                <Route path="/" element={<Navigate to={'/all'} />} />
+                <Route path="/" element={<Navigate to={`/${categories[0].name}`} />} />
                 {this.props.categories.map((category, i) => {
                     return(
                         <Route key={i} path={`/${category.name}`} element={<Categories category={category.name} />} />
                     )
                 })}
                 
-                {this.props.categories.map((category, i) => {
+                {categories.map((category, i) => {
                     return  category.products.map((product, i) => {
                                 return(
                                     <Route key={i} path={`/${product.category}/${product.id}`} element={<SingleProduct product={product} />} />
@@ -29,8 +30,5 @@ class Body extends Component {
         )
     }
 }
-
-
-
 
 export default Body

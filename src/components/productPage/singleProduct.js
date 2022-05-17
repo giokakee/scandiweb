@@ -24,17 +24,15 @@ class SingleProduct extends Component {
         
         const { product, add, currency } = this.props
         const priceToShow = product.prices.find(price => price.currency.symbol === currency)
-
-        const addProduct = () => {
+        const addProduct = () => { 
             let productToAdd = {...product, chosenAttributes: this.state.attributes, amount: 1 }
+            console.log(productToAdd)
 
-            if(Object.keys(product.attributes).length === Object.keys(this.state.attributes).length){
+            if(Object.keys(product.attributes).length === Object.keys(this.state.attributes).length){ 
                 add(productToAdd)
             }else{
                 alert('Choose attributes')
             }
-
-
         }
 
         return(

@@ -11,23 +11,21 @@ class Categories extends Component {
 
     render(){
 
-        const { category } = this.props
-        const categoryToShow = this.props.categories.find( c => c.name === category)
+        const { category, categories } = this.props
+        const categoryToShow = categories.find( c => c.name === category)
         
         return(
             <div>
-                {categoryToShow 
-                 ?  <div>
-                        <h1>{category.toUpperCase()}</h1>
-                            <div  className="categoryPage">
-                                {categoryToShow.products.map((product, i) => {
-                                    return(
-                                        <Products key={i} product={product} />
-                                    )
-                                })}
-                            </div>
-                    </div>
-                 :  <div>errrorrrr</div>  }
+                {categoryToShow && <div>
+                                        <h1>{category.toUpperCase()}</h1>
+                                            <div  className="categoryPage">
+                                                {categoryToShow.products.map((product, i) => {
+                                                    return(
+                                                        <Products key={i} product={product} />
+                                                    )
+                                                })}
+                                            </div>
+                                    </div>}
             </div>
         )
     }
