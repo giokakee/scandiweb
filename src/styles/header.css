@@ -41,6 +41,12 @@
     border-bottom: 2px solid white;
 }
 
+.header-logo-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .header-logo{
     display: flex;
     justify-content: center;
@@ -62,7 +68,18 @@
 .header-symbol{
     margin-right: 22px;
 }
+.dropDown-symbol{
+    transition: 2s;
+    cursor: pointer;
+}
+.currencyClose, .currencyOpen{
+    cursor: pointer;
+    transition: 0.3s;
+}
 
+.header-symbol-div{
+    display: flex;
+}
 
 .symbol{
     margin-top: 10px;
@@ -157,6 +174,20 @@
     cursor: pointer;
 }
 
+.price, .cart-dropDown-product-info-productName{
+    margin-top: 7px;
+}
+
+.cart-dropDown-product-image-div img{
+    width: 100%;
+}
+
+.cart-dropDown-price-total{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 
 
 .cartShadow{
@@ -202,6 +233,12 @@
     width: 140px;
     height: 43px;
     cursor: pointer;
+    border: none;
+}
+.cart-dropDown-checkout{
+    background-color: #5ECE7B;
+    color: white;
+    border: none;
 }
 
 .currencyOpen{

@@ -79,7 +79,7 @@
 }
 
 .cart-product-changePhoto{
-    position: absolute;
+    position: inherit;
     width: 64px;
     height: 20px;
     margin-bottom: 24px;
@@ -98,3 +98,10 @@
 }
 
 
+
+.cart-product-counter-image-container{
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    margin-left: 25px;
+}

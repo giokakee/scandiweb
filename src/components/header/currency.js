@@ -3,6 +3,7 @@ import OutsideClickHandler from "react-outside-click-handler/build/OutsideClickH
 import { connect } from "react-redux";
 import { changeCurrency } from "../../reducers/currencyreducer";
 
+
 const currencies = [
     {
         label: "USD",
@@ -50,10 +51,7 @@ class Currency extends Component {
             this.setState({open: false})
         }
         
-        const close = () => {
-            this.setState({open: false})
-        }
-    
+            
     
         const outsideClickHandler = () => {
             this.setState({open: false})
@@ -62,10 +60,10 @@ class Currency extends Component {
         return(
             <OutsideClickHandler onOutsideClick={outsideClickHandler}>
                 <div className='header-symbol'>
-                    <div style={{display: 'flex'}}>
-                            <span style={{cursor: 'pointer', transition:'2s'}} onClick={() => this.setState({open: true}) }>{symbol}</span>
-                            {open   ? <span style={{cursor: 'pointer', transition:'0.3s' }} onClick={() => close()} className='currencyClose'></span> 
-                                    : <span style={{cursor: 'pointer', transition:'0.3s'}} onClick={() => this.setState({open: true})} className='currencyOpen'></span>}
+                    <div className="header-symbol-div" >
+                            <span className="dropDown-symbol" onClick={() => this.setState({open: true}) }>{symbol}</span>
+                            {open   ? <span  onClick={() => this.setState({open: false})} className='currencyClose'></span> 
+                                    : <span  onClick={() => this.setState({open: true})} className='currencyOpen'></span>}
                     </div>
 
                     {open && <div style={{position: 'absolute', marginLeft: '-30px'}} className='symbol'>

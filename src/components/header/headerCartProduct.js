@@ -28,8 +28,8 @@ class HeaderCartProduct extends Component {
                             <div key={i} className='cart-dropDown-product-container'>
                                 <div className="cart-dropDown-product-info">
                                     <div>{product.brand}</div>
-                                    <div style={{marginTop: '7px'}}>{product.name}</div>
-                                    <div className="price" style={{marginTop: '7px'}}>{symbol}{priceToShow.amount}</div>
+                                    <div className="cart-dropDown-product-info-productName">{product.name}</div>
+                                    <div className="price" >{symbol}{priceToShow.amount}</div>
                                     <div>
                                         {product.attributes.map(attribute => {
                                             return(
@@ -43,20 +43,20 @@ class HeaderCartProduct extends Component {
                                 <div className='cart-dropDown-product-counter'>
                                     <Counter amount={product.amount} product={product} />
                                 </div>
-                                <div>
-                                    <img key={product.id} src={product.gallery[0]} alt='product' style={{width: '100%'}} />
+                                <div className="cart-dropDown-product-image-div">
+                                    <img key={product.id} src={product.gallery[0]} alt='product' />
                                 </div>
                             </div>
                         )
                     })}
                 </div>
-                <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center'}}>
+                <div className="cart-dropDown-price-total" >
                     <p className="price">Total</p>
                     <p className="price">{symbol}{total.toFixed(2)}</p>
                 </div>
                 <div className="headerCartButtons">
                     <Link to='/cart'><button onClick={open}>VIEW BAG</button></Link>
-                    <button style={{backgroundColor: '#5ECE7B', color: 'white', border: 'none'}}>CHECK OUT</button>
+                    <button className="cart-dropDown-checkout">CHECK OUT</button>
                 </div>   
             </div>
         )

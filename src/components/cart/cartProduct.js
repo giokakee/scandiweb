@@ -41,8 +41,8 @@ class CartProduct extends Component {
                     </div>
                     <div className="cart-product-counter-image">
                         <Counter amount={product.amount} product={product} />
-                        <div>
-                            <img key={product.id} src={product.gallery[imgNum]} alt='product' style={{width: '200px', marginLeft: '25px'}} />
+                        <div className="cart-product-counter-image-container"> 
+                            <img key={product.id} src={product.gallery[imgNum]} alt='product'  />
                             <div className="cart-product-changePhoto">
                                 <button onClick={() => imgNum > 0 && this.setState({imgNum: imgNum - 1})}>{"<"}</button>
                                 <button onClick={() => imgNum+1 < product.gallery.length && this.setState({imgNum: imgNum + 1})}>{">"}</button>

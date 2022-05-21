@@ -54,8 +54,8 @@ render(){
                                                     })}     
                                             </div>
 
-                                            <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
-                                                <Link to={'/'}><div className='header-logo' style={{cursor: 'pointer'}} ></div></Link>
+                                            <div className='header-logo-container'>
+                                                <Link to={'/'}><div className='header-logo' ></div></Link>
                                             </div>
                                                 
                                             <div className='header-currency-cart'>

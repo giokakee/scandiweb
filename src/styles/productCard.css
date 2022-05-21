@@ -13,6 +13,12 @@
     justify-content: space-between;
     flex-direction: column;
 }
+.productCard-image-container{
+    display: flex;
+    justify-content: center;
+    width: 355px;
+    align-items: center;
+}
 
 .productCard-img{
     width: auto;
@@ -47,6 +53,22 @@ font-size: 18px;
 line-height: 160%;
 }
 
+.productCard-outOfStock{
+    opacity: 0.5;
+}
+.productCard-outOfStock-text{
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    height: 330px;
+    opacity: 1;
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 160%;
+}
 
 .outOfStock{
     color: red

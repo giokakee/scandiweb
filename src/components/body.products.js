@@ -33,10 +33,10 @@ class Products extends Component{
         }
 
         return(
-            <div className="productCard"  onMouseEnter={() => this.setState({hover: true})} onMouseLeave={() => this.setState({hover: false})}>
-                <div className='addToCartSvg' style={this.state.hover ? {display: 'block'} : {display: 'none'}} onClick={addProduct}></div>
+            <div className={`productCard ${!product.inStock && "productCard-outOfStock"}`}  onMouseEnter={() => this.setState({hover: true})} onMouseLeave={() => this.setState({hover: false})}>
+                <div className='addToCartSvg' style={this.state.hover ? {display: 'block'} : {display: 'none'}} onClick={product.inStock && addProduct}></div>
                     <Link to={`/${product.category}/${product.id}`}>
-                        <div style={{overflow: 'hidden', width: '355px', display: 'flex', justifyContent:'center'}}>
+                        <div className='productCard-image-container' >
                             <img className="productCard-img" src={product.gallery[0]} alt='bad' />
                         </div>
                         <div>
@@ -48,6 +48,7 @@ class Products extends Component{
                                     })}
                         </div>
                     </Link>
+                    {!product.inStock && <p className='productCard-outOfStock-text'>OUT OF STOCK</p>}
             </div>
         )
     }
