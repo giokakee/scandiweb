@@ -99,21 +99,6 @@ export class CapacityAttribute extends Component {
 
 
 
-const sizes = [
-    {
-        name: 'MS'
-    },
-    {
-        name: 'S'
-    },
-    {
-        name: 'M'
-    },
-    {
-        name: 'L'
-    }
-]
-
 export class SizeAttribute extends Component {
     render(){
         const  { attribute, chosenAttributes } = this.props
@@ -122,12 +107,12 @@ export class SizeAttribute extends Component {
             <div>
                 <p className="headerCartAttributeName">{attribute.name.toUpperCase()}: </p>
                 <div  className="headerCartSizeAttribute">
-                    {attribute.items.map((item, i) => {
+                    {attribute.items.map((item) => {
                         return(
                             <div 
                                 key={item.id} 
                                 className={`headerCartSizeItem ${chosenAttributes[attribute.name] === item.value && 'headerCartChosenSize'}`}>
-                                <p>{sizes[i].name}</p>
+                                <p>{item.value}</p>
                             </div>
                         )
                     })}

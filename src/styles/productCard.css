@@ -1,7 +1,7 @@
 .productCard{
     width: 386px;
     height: auto;
-    margin-bottom: 119px;
+    margin-bottom: 100px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -16,7 +16,7 @@
 
 .productCard-img{
     width: auto;
-    height: 445px;
+    height: 330px;
 }
 
 .productCard:hover{
@@ -28,8 +28,8 @@
     position: absolute;
     height: 53px;
     width: 53px;
-    margin-top: 421px;
-    margin-left: 231px;
+    margin-top: 300px;
+    margin-left: 249px;
     transition: 0.1s;
     cursor: pointer;
 }
@@ -45,4 +45,9 @@ font-style: normal;
 font-weight: 600;
 font-size: 18px;
 line-height: 160%;
+}
+
+
+.outOfStock{
+    color: red
 }

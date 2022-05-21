@@ -4,6 +4,7 @@
     display: grid;
     grid-template-columns: 70% 30%;
     margin-top: 37px;
+    margin-bottom: 11em;
 }
 
 
@@ -76,14 +77,8 @@
     cursor: pointer;
 }
 
-
-.description ul{
-    padding: 0;
-}
-
 .description li{
-    list-style-type: none;
-    left: 0%;
+    margin-bottom: 15px;
 }
 
 ::-webkit-scrollbar{

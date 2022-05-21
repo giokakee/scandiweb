@@ -30,7 +30,6 @@ export class TouchIdAttribute extends Component {
                 <p  className="attributeName">{attribute.name.toUpperCase()}: </p>
                 <div className="touchIdAttribute">
                     {attribute.items.map(item => {
-                        console.log(attribute.name)
                         return(
                             <div key={item.id} onClick={() => addAttribute(item)} className={`${this.state.touchId === item.value && 'chosenValue'}`}>
                                 <p>{item.value}</p>
@@ -171,20 +170,6 @@ export class CapacityAttribute extends Component {
 
 
 
-const sizes = [
-    {
-        name: 'MS'
-    },
-    {
-        name: 'S'
-    },
-    {
-        name: 'M'
-    },
-    {
-        name: 'L'
-    }
-]
 
 export class SizeAttribute extends Component {
     constructor(props){
@@ -219,7 +204,7 @@ export class SizeAttribute extends Component {
                                 key={item.id} 
                                 className={`sizeItem ${this.state.chosenSize === item.value && 'chosenSize'}`}
                                 onClick={() => addAttribute(item)}>
-                                <p>{sizes[i].name}</p>
+                                <p>{item.value}</p>
                             </div>
                         )
                     })}

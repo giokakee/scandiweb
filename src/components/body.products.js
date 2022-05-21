@@ -5,15 +5,15 @@ import { Link } from "react-router-dom"
 import { addProductToCart } from '../reducers/cartReducer'
 
 
-
 class Products extends Component{
     constructor(props){
         super(props)
 
         this.state = {
-            hover: false
+            hover: false,            
         }
     }
+
 
 
     render(){

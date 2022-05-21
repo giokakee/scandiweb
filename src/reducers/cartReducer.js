@@ -7,8 +7,30 @@ const cartReducer = (state = initialState, action) => {
     switch(action.type){
         case 'ADD':
 
-        let includes = state.find(p => JSON.stringify(action.data) === JSON.stringify(p)) ? true : false
-        if(includes)return state
+        let cart = state.map(product => {
+            let {amount, ...rest} = product
+            return rest
+        })
+        
+        let { amount, ...data } = action.data
+
+        let includes = cart.find(p => JSON.stringify(data) === JSON.stringify(p)) ? true : false
+
+
+
+        if(includes){
+
+            return state.map(p => {
+
+                let {amount, ...rest} = p
+
+                if(JSON.stringify(rest) === JSON.stringify(data)){
+                    return {...rest, amount: amount + 1}
+                }else{
+                    return p
+                }
+            })
+        }
 
 
        return [...state, action.data]

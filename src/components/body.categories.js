@@ -1,42 +1,75 @@
 import '../styles/category.css'
 import { Component } from "react"
-import { connect } from "react-redux"
 import Products from "./body.products"
+import { BY_CATEGORY, URL } from '../gql/gql'
+import axios from 'axios'
 
 
 class Categories extends Component {
+    constructor(props){
+        super(props)
 
+        this.state = {
+            loading: true,
+            category: {},
+            categoryName: ''
+        }
+    }
 
+    async componentDidMount(){
+        try {
+            const data = await axios.post(URL, {
+                query: BY_CATEGORY,
+                variables: {title: this.props.category}
+            })
 
+            this.setState({category: data.data.data.category, loading: false})
+        }catch(err) {
+            console.log({message: err.message})
+        }
+    }
+
+    
+async componentDidUpdate(){
+    if(this.props.category !== this.state.categoryName){
+        this.setState({categoryName: this.props.category})
+        
+        try {
+            const data = await axios.post(URL, {
+                query: BY_CATEGORY,
+                variables: {title: this.props.category}
+            })
+
+            this.setState({category: data.data.data.category, loading: false})
+        }catch(err) {
+            console.log({message: err.message})
+        }
+    }
+}
 
     render(){
 
-        const { category, categories } = this.props
-        const categoryToShow = categories.find( c => c.name === category)
-        
+        const { category } = this.props
+
         return(
             <div>
-                {categoryToShow && <div>
+                {this.state.loading ? <div></div>
+                                    : <div>
                                         <h1>{category.toUpperCase()}</h1>
                                             <div  className="categoryPage">
-                                                {categoryToShow.products.map((product, i) => {
+                                                {this.state.category.products.map((product, i) => {
                                                     return(
                                                         <Products key={i} product={product} />
                                                     )
                                                 })}
                                             </div>
-                                    </div>}
+                                        </div>  }
             </div>
         )
     }
 }
 
-const mapStateToProps = state  => {
-    return {
-        categories: state.productsReducer
-    }
-}
 
 
 
-export default connect(mapStateToProps)(Categories)
+export default Categories

@@ -1,33 +1,68 @@
 import  '../../styles/header.css'
-import { Link } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
 import { connect } from 'react-redux';
-import { changeCurrency } from '../../reducers/currencyReducer';
 import Cart from './headerCart';
 import Currency from './currency'
 import { Component } from 'react';
+import { CATEGORIES } from '../../gql/gql';
+import axios from 'axios';
+
+const Test = (props) => {
+    const { pathname } = useLocation()
+    let { name } = props.category
+
+    return <NavLink className={pathname.indexOf(name) >=0 ? 'greenCategory' : 'blackCategory'} to={`/${name}`}>{name}</NavLink>
+
+} 
 
 class Header extends Component {
+    constructor(props){
+        super(props)
+
+        this.state = {
+            categories: [],
+            loading: true
+        }
+    }
+
+async componentDidMount(){
+   try{
+    let data = await axios.post('http://localhost:4000/', {
+        query: CATEGORIES
+      })
+      this.setState({categories: data.data.data.categories, loading: false})
+      
+   }catch(err){
+       console.log({message: err.message})
+   }
+}
+
 
 
 render(){
-    const { categories, pathname } = this.props
-        return(
-            <div className="header">
-                <div className='header-categories' >
-                    {categories.map((category, i) => {
-                        return(
-                            <Link className={pathname.indexOf(category.name) >=0 ? 'greenCategory' : 'blackCategory'} key={i} to={`/${category.name}`}>{category.name}</Link>
-                            )
-                        })}     
-                </div>
-                <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
-                <Link to={'/'}><div className='header-logo' style={{cursor: 'pointer'}} ></div></Link>
-                </div>
-                    
-                <div className='header-currency-cart'>
-                    <Currency />
-                    <Cart />
-                </div>
+    const { categories } = this.state
+
+    return(
+            <div>
+                {this.state.loading ? <div className='spin'></div>
+                                    :   <div className="header">
+                                            <div className='header-categories' >
+                                                {categories.map((category, i) => {
+                                                    return(
+                                                            <Test key={i} category={category} />
+                                                        )
+                                                    })}     
+                                            </div>
+
+                                            <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
+                                                <Link to={'/'}><div className='header-logo' style={{cursor: 'pointer'}} ></div></Link>
+                                            </div>
+                                                
+                                            <div className='header-currency-cart'>
+                                                <Currency />
+                                                <Cart />
+                                            </div>
+                                        </div>}
             </div>
         )
 }
@@ -39,14 +74,6 @@ const mapStateToProps = state => {
     }
 }
 
-const mapDispatchToPtops = (dispatch) => {
-    return {
-        setCurrency: (data) => {
-            dispatch(changeCurrency(data))
-        }
-    }
-}
- 
 
 
-export default connect(mapStateToProps, mapDispatchToPtops)(Header)
+export default connect(mapStateToProps)(Header)
