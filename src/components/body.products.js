@@ -47,8 +47,8 @@ class Products extends Component{
                                         )
                                     })}
                         </div>
+                           {!product.inStock && <p className='productCard-outOfStock-text'>OUT OF STOCK</p>}
                     </Link>
-                    {!product.inStock && <p className='productCard-outOfStock-text'>OUT OF STOCK</p>}
             </div>
         )
     }
