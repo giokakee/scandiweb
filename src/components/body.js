@@ -1,7 +1,7 @@
 import { Component } from "react";
 import { Route, Routes, Navigate, useLocation } from "react-router-dom";
 import Categories from "./body.categories";
-import SingleProduct from "./productPage/singleProduct";
+import SingleProduct from "./productPage/singleproduct";
 import ProductCart from './cart/cart'
 import axios from "axios";
 import { CATEGORIES } from "../gql/gql";

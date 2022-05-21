@@ -2,7 +2,7 @@ import { Component } from "react";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import Counter from "./counter";
-import HeaderCartAttribute from "./headerCartAttribute";
+import HeaderCartAttribute from "./headercartattribute";
 
 class HeaderCartProduct extends Component {
 

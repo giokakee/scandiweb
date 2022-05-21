@@ -1,8 +1,8 @@
-import '../styles/productCard.css'
+import '../styles/productcard.css'
 import { Component } from "react"
 import { connect } from "react-redux"
 import { Link } from "react-router-dom"
-import { addProductToCart } from '../reducers/cartReducer'
+import { addProductToCart } from '../reducers/cartreducer'
 
 
 class Products extends Component{

@@ -1,7 +1,7 @@
 import '../../styles/singleProduct.css'
 import { Component } from "react";
 import { connect } from "react-redux";
-import { addProductToCart } from "../../reducers/cartReducer";
+import { addProductToCart } from "../../reducers/cartreducer";
 import Attribute from './attribute';
 import axios from 'axios';
 import { PRODUCT_BY_ID, URL } from '../../gql/gql';

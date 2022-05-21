@@ -1,5 +1,5 @@
 import { Component } from "react";
-import { CapacityAttribute, SizeAttribute, ColorAttribute, PortsAttribute, TouchIdAttribute } from "../productPage/attributes.js/headerCartAttributes";
+import { CapacityAttribute, SizeAttribute, ColorAttribute, PortsAttribute, TouchIdAttribute } from "../productPage/attributes.js/headercartattributes";
 
 
 class HeaderCartAttribute extends Component {

@@ -1,6 +1,6 @@
 import { Component } from "react";
 import { connect } from "react-redux";
-import { decreaseAmount, increaseAmount } from "../../reducers/cartReducer";
+import { decreaseAmount, increaseAmount } from "../../reducers/cartreducer";
 
 class Counter extends Component {
 

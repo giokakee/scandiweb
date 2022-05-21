@@ -1,7 +1,7 @@
 import { Component } from "react";
 import OutsideClickHandler from "react-outside-click-handler/build/OutsideClickHandler";
 import { connect } from "react-redux";
-import { changeCurrency } from "../../reducers/currencyReducer";
+import { changeCurrency } from "../../reducers/currencyreducer";
 
 const currencies = [
     {

@@ -1,5 +1,5 @@
 import { Component } from "react";
-import '../../../styles/headerCartAttributes.css'
+import '../../../styles/headercartattributes.css'
 
 
 export class TouchIdAttribute extends Component {

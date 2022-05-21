@@ -1,7 +1,7 @@
 import '../../styles/cart.css'
 import { Component } from "react";
 import { connect } from "react-redux";
-import { deleteProductFromCart } from '../../reducers/cartReducer'
+import { deleteProductFromCart } from '../../reducers/cartreducer'
 import CartProduct from './cartProduct'
 
 

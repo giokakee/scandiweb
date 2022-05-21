@@ -1,7 +1,7 @@
 import  '../../styles/header.css'
 import { Link, NavLink, useLocation } from "react-router-dom";
 import { connect } from 'react-redux';
-import Cart from './headerCart';
+import Cart from './headercart';
 import Currency from './currency'
 import { Component } from 'react';
 import { CATEGORIES } from '../../gql/gql';
