@@ -11,7 +11,6 @@ import Header from './components/header/Header'
 class App extends Component{
 
   componentDidUpdate(){
-    console.log(window.location.pathname)
     window.localStorage.setItem('cart', JSON.stringify(this.props.cart))
   }
 
@@ -27,7 +26,7 @@ class App extends Component{
 }
 
 
-const mapStateToPtops = (state) => {
+const mapStateToProps = (state) => {
   return {
     cart: state.cartReducer
   }
@@ -37,4 +36,4 @@ const mapStateToPtops = (state) => {
 
 
 
-export default connect(mapStateToPtops)(App)
+export default connect(mapStateToProps)(App)

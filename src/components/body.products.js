@@ -34,7 +34,7 @@ class Products extends Component{
 
         return(
             <div className={`productCard ${!product.inStock && "productCard-outOfStock"}`}  onMouseEnter={() => this.setState({hover: true})} onMouseLeave={() => this.setState({hover: false})}>
-                <div className='addToCartSvg' style={this.state.hover ? {display: 'block'} : {display: 'none'}} onClick={product.inStock && addProduct}></div>
+                <div className='addToCartSvg' style={this.state.hover ? {display: 'block'} : {display: 'none'}} onClick={product.inStock ? addProduct : undefined}></div>
                     <Link to={`/${product.category}/${product.id}`}>
                         <div className='productCard-image-container' >
                             <img className="productCard-img" src={product.gallery[0]} alt='bad' />
@@ -46,7 +46,7 @@ class Products extends Component{
                                         <div key={i}>{price.currency.symbol === symbol ?  <p className='price'>{price.currency.symbol} {price.amount}</p> : null }</div>
                                         )
                                     })}
-                        </div>
+                        </div> 
                            {!product.inStock && <p className='productCard-outOfStock-text'>OUT OF STOCK</p>}
                     </Link>
             </div>
