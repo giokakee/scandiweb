@@ -11,15 +11,14 @@ class HeaderCartAttribute extends Component {
 
 
     render(){
-        const { attribute, chosenAttributes } = this.props
-
+        const { attribute, chosenAttributes, cart } = this.props
         return(
             <div>
-                {attribute.name === 'Size'                 && <SizeAttribute     attribute={attribute} chosenAttributes={chosenAttributes} />}
-                {attribute.name === 'Capacity'             && <CapacityAttribute attribute={attribute} chosenAttributes={chosenAttributes} />}                 
-                {attribute.name === 'Color'                && <ColorAttribute    attribute={attribute} chosenAttributes={chosenAttributes} />}
-                {attribute.name === 'With USB 3 ports'     && <PortsAttribute    attribute={attribute} chosenAttributes={chosenAttributes} />}
-                {attribute.name === 'Touch ID in keyboard' && <TouchIdAttribute  attribute={attribute} chosenAttributes={chosenAttributes} />}
+                {attribute.name === 'Size'                 && <SizeAttribute     attribute={attribute} chosenAttributes={chosenAttributes} cart={cart} />}
+                {attribute.name === 'Capacity'             && <CapacityAttribute attribute={attribute} chosenAttributes={chosenAttributes} cart={cart} />}                 
+                {attribute.name === 'Color'                && <ColorAttribute    attribute={attribute} chosenAttributes={chosenAttributes} cart={cart} />}
+                {attribute.name === 'With USB 3 ports'     && <PortsAttribute    attribute={attribute} chosenAttributes={chosenAttributes} cart={cart} />}
+                {attribute.name === 'Touch ID in keyboard' && <TouchIdAttribute  attribute={attribute} chosenAttributes={chosenAttributes} cart={cart} />}
             </div>
         )
     }

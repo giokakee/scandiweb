@@ -5,10 +5,10 @@ import '../../../../styles/headercartattributes.css'
 
 class PortsAttribute extends Component {
     render(){
-        const { attribute, chosenAttributes } = this.props
+        const { attribute, chosenAttributes, cart } = this.props
         return(
             <div>
-                <p  className="headerCartAttributeName">{attribute.name.toUpperCase()}: </p>
+                <p  className={cart ? "cartAttributeName" : "headerCartAttributeName"}>{attribute.name.toUpperCase()}: </p>
                 <div className="headerCartPortAttribute">
                     {attribute.items.map(item => {
                         return(

@@ -33,7 +33,7 @@ class CartProduct extends Component {
                             {product.attributes.map(attribute => {
                                 return(
                                     <div key={attribute.id}>
-                                        <HeaderCartAttribute attribute={attribute} chosenAttributes={product.chosenAttributes} />
+                                        <HeaderCartAttribute attribute={attribute} chosenAttributes={product.chosenAttributes} cart={true} />
                                     </div>
                                 )
                             })}

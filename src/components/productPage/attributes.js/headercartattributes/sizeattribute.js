@@ -1,20 +1,22 @@
 import { Component } from "react";
 import '../../../../styles/headercartattributes.css'
+import '../../../../styles/cartattributes.css'
+
 
 
 class SizeAttribute extends Component {
     render(){
-        const  { attribute, chosenAttributes } = this.props
-        
+        const  { attribute, chosenAttributes, cart } = this.props
+
         return(
             <div>
-                <p className="headerCartAttributeName">{attribute.name.toUpperCase()}: </p>
-                <div  className="headerCartSizeAttribute">
+                <p className={` ${cart ? 'cartAttributeName' : "headerCartAttributeName"}`}>{attribute.name.toUpperCase()}: </p>
+                <div  className={` ${cart ? 'cartSizeAttribute' : "headerCartSizeAttribute"}`}>
                     {attribute.items.map((item) => {
                         return(
                             <div 
                                 key={item.id} 
-                                className={`headerCartSizeItem ${chosenAttributes[attribute.name] === item.value && 'headerCartChosenSize'}`}>
+                                className={` ${cart ? 'cartSizeItem' : "headerCartSizeItem"} ${chosenAttributes[attribute.name] === item.value && 'headerCartChosenSize'}`}>
                                 <p>{item.value}</p>
                             </div>
                         )

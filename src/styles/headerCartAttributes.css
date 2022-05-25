@@ -50,7 +50,7 @@
     padding: 1px;
 }
 
-.headerCartCapacityItem, .headerCartPortAttribute, .headerCartTouchIdAttribute  {
+.headerCartCapacityAttribute, .headerCartPortAttribute, .headerCartTouchIdAttribute  {
     display: flex;
     align-items: center;
 }
@@ -58,7 +58,7 @@
     font-size: 11px;
 }
 
-.headerCartCapacityItem div, .headerCartPortAttribute div, .headerCartTouchIdAttribute div {
+.headerCartCapacityItem, .headerCartPortAttribute div, .headerCartTouchIdAttribute div {
     min-width: 25px;
     padding-left: 2%;
     padding-right: 2%;

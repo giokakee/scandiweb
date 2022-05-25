@@ -16,7 +16,6 @@ class SizeAttribute extends Component {
 
     render(){
         const  { attribute, setChosenAttribute } = this.props
-
         const addAttribute = (data) => {
             this.setState({chosenSize: data.value})
             setChosenAttribute(({attributes}) => {
@@ -30,7 +29,7 @@ class SizeAttribute extends Component {
             <div>
                 <p className="attributeName">{attribute.name.toUpperCase()}: </p>
                 <div  className="sizeAttribute">
-                    {attribute.items.map((item, i) => {
+                    {attribute.items.map((item) => {
                         return(
                             <div 
                                 key={item.id} 
