@@ -68,6 +68,7 @@
     border: none;
     background-color: #5ECE7B;
     color: white;
+    margin-top: 16px;
 }
 
 
@@ -109,4 +110,13 @@
 .cart-product-counter-image-container img{
     width: 100%;
     height: auto;
+}
+
+
+.cart-bottom div{
+    display: flex;
+}
+
+.cart-bottom div p{
+    width: 107px;
 }

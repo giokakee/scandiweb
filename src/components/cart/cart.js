@@ -43,9 +43,18 @@ class ProductCart extends Component {
                     })}
                 </div>
                 <div className='cart-bottom' >
-                        <p>Tax: 21%: <span>{total > 0 ? tax(21, total) : 0}</span> </p>
-                        <p>Quantity: <span>{quantity}</span></p>
-                        <p>Total: <span>{symbol}{total}</span></p>
+                    <div>
+                        <p>Tax: 21%:</p>
+                        <span>{symbol}{total > 0 ? tax(21, total) : 0}</span> 
+                    </div>
+                    <div>
+                        <p>Quantity:</p>
+                        <span>{quantity}</span>
+                    </div>
+                    <div>
+                        <p >Total: </p>
+                        <span className='total'>{symbol}{total}</span>
+                    </div>
                         <button>ORDER</button>
                 </div>  
             </div>
