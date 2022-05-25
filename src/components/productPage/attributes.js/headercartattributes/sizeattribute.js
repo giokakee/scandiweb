@@ -16,7 +16,7 @@ class SizeAttribute extends Component {
                         return(
                             <div 
                                 key={item.id} 
-                                className={` ${cart ? 'cartSizeItem' : "headerCartSizeItem"} ${chosenAttributes[attribute.name] === item.value && 'headerCartChosenSize'}`}>
+                                className={` ${cart ? 'cartSizeItem' : "headerCartSizeItem"} ${chosenAttributes[attribute.name] === item.value ? 'headerCartChosenSize' : ""}`}>
                                 <p>{item.value}</p>
                             </div>
                         )

@@ -16,7 +16,7 @@ class TouchIdAttribute extends Component {
                 <div className="headerCartTouchIdAttribute">
                     {attribute.items.map(item => {
                         return(
-                            <div key={item.id}className={`${chosenAttributes[attribute.name] === item.value && 'headerCartChosenValue'}`}>
+                            <div key={item.id}className={`${chosenAttributes[attribute.name] === item.value ? 'headerCartChosenValue' : ""}`}>
                                 <p>{item.value}</p>
                             </div>
                         )

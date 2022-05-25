@@ -17,7 +17,7 @@ class CapacityAttribute extends Component {
                     {attribute.items.map(item => {
                             return(
                                 <div key={item.id} 
-                                    className={`${cart ? "cartCapacityItem" : "headerCartCapacityItem"} ${chosenAttributes[attribute.name] === item.value  && `${cart ? "cartChosenCapacity" : "headerCartChosenCapacity"}` }`}>
+                                    className={`${cart ? "cartCapacityItem" : "headerCartCapacityItem"} ${chosenAttributes[attribute.name] === item.value  ? `${cart ? "cartChosenCapacity" : "headerCartChosenCapacity"}` : "" }`}>
                                     <p>{item.value}</p>
                                 </div>
                             )
