@@ -177,6 +177,11 @@
 .price, .cart-dropDown-product-info-productName{
     margin-top: 7px;
 }
+.cart-dropDown-product-image-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 .cart-dropDown-product-image-div img{
     width: 100%;

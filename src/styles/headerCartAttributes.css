@@ -28,7 +28,6 @@
     display: flex;
     align-items: center;
     height: 43px;
-    margin-bottom: 38px;
 }
 .headerCartColorItem{
     height: 17px;
@@ -54,20 +53,21 @@
 .headerCartCapacityItem, .headerCartPortAttribute, .headerCartTouchIdAttribute  {
     display: flex;
     align-items: center;
-    margin-bottom: 38px;
 }
 .headerCartCapacityItem  p, .headerCartPortAttribute p, .headerCartTouchIdAttribute p {
     font-size: 11px;
 }
 
 .headerCartCapacityItem div, .headerCartPortAttribute div, .headerCartTouchIdAttribute div {
-    width: 25px;
+    min-width: 25px;
+    padding-left: 2%;
+    padding-right: 2%;
     margin-right: 10px;
     border: 1px solid rgb(160, 142, 142);
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 25px;
+    min-height: 25px;
 }
 
 .headerCartChosenCapacity, .headerCartChosenValue {
@@ -78,7 +78,6 @@
 .headerCartAttributeName{
     font-family: 'Roboto Condensed';
     font-style: normal;
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 18px;
+    font-size: 14px;
+    line-height: 16px;
 }

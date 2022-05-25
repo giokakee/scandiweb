@@ -42,7 +42,7 @@ class SingleProduct extends Component {
     render(){
         
         const {  add, currency } = this.props
-        const {product} = this.state
+        const { product } = this.state
         
         const addProduct = () => { 
             let productToAdd = {...product, chosenAttributes: this.state.attributes, amount: 1 }

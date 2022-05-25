@@ -47,10 +47,10 @@
 
 .price{
     font-family: 'Raleway';
-font-style: normal;
-font-weight: 600;
-font-size: 18px;
-line-height: 160%;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 160%;
 }
 
 .productCard-outOfStock{

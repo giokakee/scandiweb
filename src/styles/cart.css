@@ -104,4 +104,9 @@
     flex-direction: column;
     width: 200px;
     margin-left: 25px;
+    justify-content: center;
+}
+.cart-product-counter-image-container img{
+    width: 100%;
+    height: auto;
 }

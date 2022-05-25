@@ -1,5 +1,13 @@
 import { Component } from "react";
-import { CapacityAttribute, SizeAttribute, ColorAttribute, PortsAttribute, TouchIdAttribute } from "./attributes.js/attributes";
+import CapacityAttribute from "./attributes.js/capacitiattribute";
+import ColorAttribute from "./attributes.js/colorattribute";
+import PortsAttribute from "./attributes.js/portsattribute";
+import SizeAttribute from "./attributes.js/sizeattribute";
+import TouchIdAttribute from "./attributes.js/touchidattribute";
+
+
+
+
 
 class Attribute extends Component {
 
