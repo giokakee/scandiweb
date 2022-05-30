@@ -77,17 +77,3 @@
     line-height: 18px;
 }
 
-
-
-.colored_button{
-    background:var(--x);
-    color:var(--on-x);
-    padding:1em;
-  }
-  .colored_button:hover,
-  .colored_button:focus {
-    background:var(--dark-x);
-  }
-  .colored_button:active {
-    background:var(--light-x);
-  }
