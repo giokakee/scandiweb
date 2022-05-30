@@ -48,16 +48,14 @@ class SingleProduct extends Component {
             let productToAdd = {...product, chosenAttributes: this.state.attributes, amount: 1 }
 
             let defaultAttributes={}
-            if(Object.keys(product.attributes).length >0){
+
                 product.attributes.map(mp => {
                     defaultAttributes[mp.name] = mp.items[0].value
                     return null
                 })
                 productToAdd.chosenAttributes = {...defaultAttributes, ...this.state.attributes}
                 add(productToAdd)
-            }else{
-                alert('Choose attributes')
-            }
+
         }
 
         return(
