@@ -23,6 +23,7 @@
 .productCard-img{
     width: auto;
     height: 330px;
+    padding-top: 15px;
 }
 
 .productCard:hover{
