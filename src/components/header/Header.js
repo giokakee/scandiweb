@@ -7,7 +7,7 @@ import { Component } from 'react';
 import { CATEGORIES } from '../../gql/gql';
 import axios from 'axios';
 
-const Test = (props) => {
+const HeaderCategoriesWithPath = (props) => {
     const { pathname } = useLocation()
     let { name } = props.category
 
@@ -49,7 +49,7 @@ render(){
                                             <div className='header-categories' >
                                                 {categories.map((category, i) => {
                                                     return(
-                                                            <Test key={i} category={category} />
+                                                            <HeaderCategoriesWithPath key={i} category={category} />
                                                         )
                                                     })}     
                                             </div>

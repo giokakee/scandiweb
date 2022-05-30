@@ -1,8 +1,6 @@
 import { Component } from "react";
 import '../../../styles/attribute.css'
 
-
-
 class ColorAttribute extends Component {
     
     constructor(props){
@@ -34,7 +32,7 @@ class ColorAttribute extends Component {
                             return(
                                 <div onClick={() => setAttribute(item)}
                                      key={item.id} 
-                                     className={`colorItem ${item.value === chosenColor && 'chosenColor'}`} 
+                                     className={`colorItem ${item.value === chosenColor ? 'chosenColor' : ""}`} 
                                      >
                                         <div style={{backgroundColor: item.value}}></div>
                                 </div>

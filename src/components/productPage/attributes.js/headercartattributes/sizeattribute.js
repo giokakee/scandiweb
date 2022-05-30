@@ -1,6 +1,6 @@
 import { Component } from "react";
-import '../../../../styles/headercartattributes.css'
-import '../../../../styles/cartattributes.css'
+import '../../../../styles/header-cart-attributes.css'
+import '../../../../styles/cart-attributes.css'
 
 
 

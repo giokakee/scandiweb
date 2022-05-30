@@ -4,8 +4,9 @@ import Categories from "./body.categories";
 import SingleProduct from "./productPage/singleproduct";
 import ProductCart from './cart/cart'
 import axios from "axios";
-import { CATEGORIES } from "../gql/gql";
+import { CATEGORIES, URL } from "../gql/gql";
 import { connect } from "react-redux";
+
 
 const CategoryWithPath = () => {
 
@@ -28,7 +29,7 @@ class Body extends Component {
 
     async componentDidMount(){
         try{
-         let data = await axios.post('http://localhost:4000/', {
+         let data = await axios.post(URL, {
              query: CATEGORIES
            })
            this.setState({categories: data.data.data.categories, loading: false})

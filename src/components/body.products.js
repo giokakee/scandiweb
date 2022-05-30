@@ -1,4 +1,4 @@
-import '../styles/productcard.css'
+import '../styles/product-card.css'
 import { Component } from "react"
 import { connect } from "react-redux"
 import { Link } from "react-router-dom"
@@ -34,7 +34,7 @@ class Products extends Component{
 
         return(
             <div className={`productCard ${!product.inStock && "productCard-outOfStock"}`}  onMouseEnter={() => this.setState({hover: true})} onMouseLeave={() => this.setState({hover: false})}>
-                <div className='addToCartSvg' style={this.state.hover ? {display: 'block'} : {display: 'none'}} onClick={product.inStock ? addProduct : undefined}></div>
+                <div className={`addToCartSvg ${this.state.hover ? "" : "nonDisplay"}`} onClick={product.inStock ? addProduct : undefined}></div>
                     <Link to={`/${product.category}/${product.id}`}>
                         <div className='productCard-image-container' >
                             <img className="productCard-img" src={product.gallery[0]} alt='bad' />

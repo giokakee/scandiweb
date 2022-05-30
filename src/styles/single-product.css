@@ -85,6 +85,10 @@
     display: none;
 }
 
+.nonDisplay{
+    display: none;
+}
+
 
 @keyframes imageOpacity {
     from{

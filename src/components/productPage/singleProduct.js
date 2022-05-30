@@ -1,4 +1,4 @@
-import '../../styles/singleProduct.css'
+import '../../styles/single-product.css'
 import { Component } from "react";
 import { connect } from "react-redux";
 import { addProductToCart } from "../../reducers/cartreducer";
@@ -81,10 +81,9 @@ class SingleProduct extends Component {
                                             <div className="bigImage">
                                                 {product.gallery.map((image, i ) => {
                                                     return(
-                                                        <img    className='bigImage-img' 
+                                                        <img    className={`bigImage-img ${this.state.imgNum === i ? '' : 'nonDisplay'}`} 
                                                                 key={i} alt='err' 
-                                                                src={image} 
-                                                                style={this.state.imgNum === i ? {display: 'block'} :{display: 'none'} } />
+                                                                src={image} />
                                                     )
                                                 })}
                                             </div>

@@ -2,7 +2,7 @@ import './App.css'
 import {  Component } from 'react'
 import { connect } from 'react-redux'
 import Body from './components/body'
-import Header from './components/header/Header'
+import Header from './components/header/header'
 
 
 

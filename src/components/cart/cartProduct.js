@@ -1,6 +1,6 @@
 import { Component } from "react";
 import { connect } from "react-redux";
-import HeaderCartAttribute from "../header/headercartattribute";
+import HeaderCartAttribute from "../header/header-cart-attribute";
 import Counter from "../header/counter";
 
 

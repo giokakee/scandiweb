@@ -1,5 +1,5 @@
 import { Component } from "react";
-import CapacityAttribute from "./attributes.js/capacitiattribute";
+import CapacityAttribute from "./attributes.js/capacityattribute";
 import ColorAttribute from "./attributes.js/colorattribute";
 import PortsAttribute from "./attributes.js/portsattribute";
 import SizeAttribute from "./attributes.js/sizeattribute";

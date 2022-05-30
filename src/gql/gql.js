@@ -1,5 +1,14 @@
 export const URL = "http://localhost:4000"
 
+export const GET_CURRENCIES = `
+  query{
+    currencies{
+      label
+      symbol
+    }
+  }
+`
+
 export const GET_ALL_PRODUCTS = `
   query{
     categories{

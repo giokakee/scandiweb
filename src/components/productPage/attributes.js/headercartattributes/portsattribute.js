@@ -1,5 +1,5 @@
 import { Component } from "react";
-import '../../../../styles/headercartattributes.css'
+import '../../../../styles/header-cart-attributes.css'
 
 
 

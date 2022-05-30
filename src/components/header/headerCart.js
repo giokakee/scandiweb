@@ -1,7 +1,7 @@
 import { Component } from "react";
 import OutsideClickHandler from "react-outside-click-handler/build/OutsideClickHandler";
 import { connect } from "react-redux";
-import HeaderCartProduct from "./headercartproduct";
+import HeaderCartProduct from "./header-cart-product";
 
 
 class Cart extends Component {

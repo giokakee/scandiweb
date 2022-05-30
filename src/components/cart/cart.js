@@ -2,7 +2,7 @@ import '../../styles/cart.css'
 import { Component } from "react";
 import { connect } from "react-redux";
 import { deleteProductFromCart } from '../../reducers/cartreducer'
-import CartProduct from './cartProduct'
+import CartProduct from './cartproduct'
 
 
 class ProductCart extends Component {
