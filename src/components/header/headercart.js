@@ -25,17 +25,19 @@ class Cart extends Component {
             this.setState({open: !this.state.open})
         }
         return(
-            <OutsideClickHandler onOutsideClick={outsideClickHandler}>
+            <div>
                 <div className={this.state.open ? 'cartShadow' : 'nonDisplay'}></div>
-                    <div className="header-cart">
-                        <div onClick={open} className='cart-logo'>
-                                {cart.length > 0 && <span className="bagItemsCounter">{cart.length}</span>}
-                        </div>
+                <OutsideClickHandler onOutsideClick={outsideClickHandler}>
+                        <div className="header-cart">
+                            <div onClick={open} className='cart-logo'>
+                                    {cart.length > 0 && <span className="bagItemsCounter">{cart.length}</span>}
+                            </div>
 
-                        {this.state.open && <HeaderCartProduct open={open} />}
-                               
-                    </div>
-            </OutsideClickHandler>
+                            {this.state.open && <HeaderCartProduct open={open} />}
+                                
+                        </div>
+                </OutsideClickHandler>
+            </div>
         )
     }
 }

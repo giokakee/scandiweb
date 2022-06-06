@@ -48,14 +48,11 @@ async componentDidUpdate(){
 }
 
     render(){
-
-        const { category } = this.props
-
         return(
             <div>
                 {this.state.loading ? <div></div>
                                     : <div>
-                                        <h1>{category.toUpperCase()}</h1>
+                                        <h1>{this.state.categoryName.toUpperCase()}</h1>
                                             <div  className="categoryPage">
                                                 {this.state.category.products.map((product, i) => {
                                                     return(
