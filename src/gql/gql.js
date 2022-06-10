@@ -9,39 +9,6 @@ export const GET_CURRENCIES = `
   }
 `
 
-export const GET_ALL_PRODUCTS = `
-  query{
-    categories{
-      name
-      products{
-        id
-        name      
-        inStock
-        gallery
-        description
-        category
-        attributes{
-          id
-          name
-          type
-          items{
-            displayValue
-            value
-            id
-          }
-        }
-        prices{
-          currency{
-            label
-            symbol
-          }
-          amount
-        }
-        brand
-      }
-    }
-}
-`
 
 export const PRODUCT_BY_ID = `
     query($id: String!){
@@ -107,14 +74,21 @@ export const BY_CATEGORY = `
     }
 `
 
+
+export const ALL_PRODUCT_ID = `
+    query($title: String!){
+      category(input: {title: $title}){
+        products{
+          id
+        }
+      }
+    }
+`
+
 export const CATEGORIES = `
   query{
     categories{
       name
-      products{
-        id
-        category
-      }
     }
   }
 `

@@ -4,7 +4,7 @@ import Categories from "./body.categories";
 import SingleProduct from "./productPage/singleproduct";
 import ProductCart from './cart/cart'
 import axios from "axios";
-import { CATEGORIES, URL } from "../gql/gql";
+import { ALL_PRODUCT_ID, CATEGORIES, URL } from "../gql/gql";
 import { connect } from "react-redux";
 
 
@@ -23,7 +23,8 @@ class Body extends Component {
 
         this.state = {
             categories: [],
-            loading: true
+            loading: true,
+            productsId: []
         }
     }
 
@@ -32,7 +33,13 @@ class Body extends Component {
          let data = await axios.post(URL, {
              query: CATEGORIES
            })
-           this.setState({categories: data.data.data.categories, loading: false})
+
+           let productsId = await axios.post(URL, {
+            query: ALL_PRODUCT_ID,
+            variables: {title: 'all'}
+          })
+           this.setState({categories: data.data.data.categories, productsId: productsId.data.data.category.products , loading: false})
+
         }catch(err){
             console.log({message: err.message})
         }
@@ -51,9 +58,9 @@ class Body extends Component {
                                         })}
                                         
                                         {this.state.categories.map((category, i) => {
-                                            return  category.products.map((product, i) => {
+                                            return  this.state.productsId.map((product, i) => {
                                                         return(
-                                                            <Route key={i} path={`/${product.category}/${product.id}`} element={<SingleProduct product={product} id={product.id} />} />
+                                                            <Route key={i} path={`/${category.name}/${product.id}`} element={<SingleProduct id={product.id} />} />
                                                         )
                                                     })
                                                 })}
