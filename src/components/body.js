@@ -5,7 +5,6 @@ import SingleProduct from "./productPage/singleproduct";
 import ProductCart from './cart/cart'
 import axios from "axios";
 import { ALL_PRODUCT_ID, CATEGORIES, URL } from "../gql/gql";
-import { connect } from "react-redux";
 
 
 const CategoryWithPath = () => {
@@ -57,13 +56,11 @@ class Body extends Component {
                                             )
                                         })}
                                         
-                                        {this.state.categories.map((category, i) => {
-                                            return  this.state.productsId.map((product, i) => {
+                                              {this.state.productsId.map((product, i) => {
                                                         return(
-                                                            <Route key={i} path={`/${category.name}/${product.id}`} element={<SingleProduct id={product.id} />} />
+                                                            <Route key={i} path={`/:categoryname/${product.id}`} element={<SingleProduct id={product.id} />} />
                                                         )
-                                                    })
-                                                })}
+                                                    })}
                                             <Route path="/cart"  element={<ProductCart />} />
                                         </Routes>}
             </div>
@@ -71,10 +68,4 @@ class Body extends Component {
     }
 }
 
-const mapStateToProps = state => {
-    return {
-        categoryName: state.categoryReducer
-    }
-}
-
-export default connect(mapStateToProps)(Body)
+export default Body
