@@ -1,4 +1,4 @@
-export const URL = "http://localhost:4000"
+export const URL = "http://localhost:4000";
 
 export const GET_CURRENCIES = `
   query{
@@ -7,8 +7,7 @@ export const GET_CURRENCIES = `
       symbol
     }
   }
-`
-
+`;
 
 export const PRODUCT_BY_ID = `
     query($id: String!){
@@ -39,7 +38,7 @@ export const PRODUCT_BY_ID = `
         brand
       }
     }
-`
+`;
 
 export const BY_CATEGORY = `
     query($title: String!){
@@ -72,18 +71,7 @@ export const BY_CATEGORY = `
         }
       }
     }
-`
-
-
-export const ALL_PRODUCT_ID = `
-    query($title: String!){
-      category(input: {title: $title}){
-        products{
-          id
-        }
-      }
-    }
-`
+`;
 
 export const CATEGORIES = `
   query{
@@ -91,4 +79,4 @@ export const CATEGORIES = `
       name
     }
   }
-`
+`;

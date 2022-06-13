@@ -5,22 +5,16 @@ import thunk from "redux-thunk";
 import cartReducer from "./reducers/cartreducer";
 import currencyReducer from "./reducers/currencyreducer";
 
-
-
 const reducers = combineReducers({
-    cartReducer,
-    currencyReducer
-})
+  cartReducer,
+  currencyReducer,
+});
 
+const store = configureStore(
+  {
+    reducer: reducers,
+  },
+  composeWithDevTools(applyMiddleware(thunk))
+);
 
-
-const store = configureStore({
-    reducer: reducers
-},
-composeWithDevTools(
-    applyMiddleware(thunk)
-    )
-)
-
-
-export default store
+export default store;

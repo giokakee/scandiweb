@@ -1,78 +1,78 @@
-.productCard{
-    width: 386px;
-    height: 444px;
-    margin-bottom: 100px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
+.productCard {
+  width: 386px;
+  height: 444px;
+  margin-bottom: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
-.productCard a{
-    height: 100%;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
+.productCard a {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
 }
-.productCard-image-container{
-    display: flex;
-    justify-content: center;
-    width: 355px;
-    align-items: center;
-}
-
-.productCard-img{
-    width: auto;
-    height: 293px;
-    padding-top: 15px;
+.productCard-image-container {
+  display: flex;
+  justify-content: center;
+  width: 355px;
+  align-items: center;
 }
 
-.productCard:hover{
-    background-color: white;
-    box-shadow: 0px 0px 77px -37px;
-}
-.addToCartSvg{
-    background: url('../svg/addToCart.svg') 100%/100% no-repeat;
-    position: absolute;
-    height: 53px;
-    width: 53px;
-    margin-top: 300px;
-    margin-left: 249px;
-    transition: 0.1s;
-    cursor: pointer;
+.productCard-img {
+  width: auto;
+  height: 293px;
+  padding-top: 15px;
 }
 
-.addToCartSvg:hover{
-    height: 67px;
-    width: 67px;
+.productCard:hover {
+  background-color: white;
+  box-shadow: 0px 0px 77px -37px;
+}
+.addToCartSvg {
+  background: url("../svg/addToCart.svg") 100%/100% no-repeat;
+  position: absolute;
+  height: 53px;
+  width: 53px;
+  margin-top: 300px;
+  margin-left: 249px;
+  transition: 0.1s;
+  cursor: pointer;
 }
 
-.price{
-    font-family: 'Raleway';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 18px;
-    line-height: 160%;
+.addToCartSvg:hover {
+  height: 67px;
+  width: 67px;
 }
 
-.productCard-outOfStock{
-    opacity: 0.5;
-}
-.productCard-outOfStock-text{
-    display: flex;
-    position: absolute;
-    justify-content: center;
-    align-items: center;
-    height: 330px;
-    opacity: 1;
-    font-family: 'Raleway';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 160%;
-    width: 386px;
-    z-index: 1;
+.price {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 160%;
 }
 
-.outOfStock{
-    color: red
+.productCard-outOfStock {
+  opacity: 0.5;
+}
+.productCard-outOfStock-text {
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  height: 330px;
+  opacity: 1;
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 160%;
+  width: 386px;
+  z-index: 1;
+}
+
+.outOfStock {
+  color: red;
 }

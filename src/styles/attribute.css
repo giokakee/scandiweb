@@ -1,79 +1,83 @@
-.sizeAttribute{
-    display: flex;
-    flex-direction: row;
+.sizeAttribute {
+  display: flex;
+  flex-direction: row;
 }
-.sizeItem{
-    border: 1px solid black;
-    height: 45px;
-    width: 63px;
-    margin-right: 13px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-}
-
-.chosenSize{
-    background-color: black;
-    color: white;
-    transition: 0.3s ease-in-out;
+.sizeItem {
+  border: 1px solid black;
+  height: 45px;
+  width: 63px;
+  margin-right: 13px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
 }
 
-.colorAttribute{
-    display: flex;
-    align-items: center;
-    height: 43px;
-    margin-bottom: 38px;
-}
-.colorItem{
-    height: 37px;
-    width: 37px;
-    padding: 3px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-right: 10px;
-    cursor: pointer;
+.chosenSize {
+  background-color: black;
+  color: white;
+  transition: 0.3s ease-in-out;
 }
 
-.colorItem div{
-    height: 35px;
-    width: 35px;
-    border: 1px solid rgb(160, 142, 142);
+.colorAttribute {
+  display: flex;
+  align-items: center;
+  height: 43px;
+  margin-bottom: 38px;
+}
+.colorItem {
+  height: 37px;
+  width: 37px;
+  padding: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+  cursor: pointer;
 }
 
-.chosenColor{
-    border: 2px solid #5ECE7B;
-    padding: 1px;
+.colorItem div {
+  height: 35px;
+  width: 35px;
+  border: 1px solid rgb(160, 142, 142);
 }
 
-.capacityItem, .portAttribute, .touchIdAttribute  {
-    display: flex;
-    align-items: center;
-    margin-bottom: 38px;
+.chosenColor {
+  border: 2px solid #5ece7b;
+  padding: 1px;
 }
 
-.capacityItem div, .portAttribute div, .touchIdAttribute div {
-    width: 50px;
-    margin-right: 10px;
-    border: 1px solid rgb(160, 142, 142);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
+.capacityItem,
+.portAttribute,
+.touchIdAttribute {
+  display: flex;
+  align-items: center;
+  margin-bottom: 38px;
 }
 
-.chosenCapacity, .chosenValue {
-    background-color: black;
-    color: white;
-    transition: 0.3s ease-in-out;
+.capacityItem div,
+.portAttribute div,
+.touchIdAttribute div {
+  width: 50px;
+  margin-right: 10px;
+  border: 1px solid rgb(160, 142, 142);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
 }
 
-.attributeName{
-    font-family: 'Roboto Condensed';
-    font-style: normal;
-    font-weight: 300;
-    font-size: 18px;
-    line-height: 18px;
+.chosenCapacity,
+.chosenValue {
+  background-color: black;
+  color: white;
+  transition: 0.3s ease-in-out;
 }
 
+.attributeName {
+  font-family: "Roboto Condensed";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 18px;
+}

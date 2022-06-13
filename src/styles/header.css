@@ -1,290 +1,282 @@
-.header{
-    display: grid;
-    grid-template-columns: 33.3333333% 33.333333333% 33.33333%;
-    justify-content: space-between;
-    height: 80px;
+.header {
+  display: grid;
+  grid-template-columns: 33.3333333% 33.333333333% 33.33333%;
+  justify-content: space-between;
+  height: 80px;
 }
 
-.header-categories{
-    display: flex;
-    flex-direction: row;
-    height: 100%;
-    justify-content: flex-start;
-    align-items: center;
+.header-categories {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  justify-content: flex-start;
+  align-items: center;
 }
 
-
-.header-categories a{
-    left: 0%;
-    right: 0%;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 120%;
-    text-transform: uppercase;
-    margin-right: 32px;
-    height: 100%;
-    display: flex;
-    align-items: center;
+.header-categories a {
+  left: 0%;
+  right: 0%;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 120%;
+  text-transform: uppercase;
+  margin-right: 32px;
+  height: 100%;
+  display: flex;
+  align-items: center;
 }
 
-.header-categories a:hover{
-    color: #5ECE7B;
+.header-categories a:hover {
+  color: #5ece7b;
 }
 
-.greenCategory{
-    color: #5ECE7B;
-    border-bottom: 2px solid #5ECE7B;
+.greenCategory {
+  color: #5ece7b;
+  border-bottom: 2px solid #5ece7b;
 }
-.blackCategory{
-    color: black;
-    border-bottom: 2px solid white;
-}
-
-.header-logo-container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.blackCategory {
+  color: black;
+  border-bottom: 2px solid white;
 }
 
-.header-logo{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: url('../svg/logo.svg') no-repeat;
-    height: 41px;
-    width: 41px;
+.header-logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-
-
-.header-currency-cart{
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
+.header-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url("../svg/logo.svg") no-repeat;
+  height: 41px;
+  width: 41px;
 }
 
-
-.header-symbol{
-    margin-right: 22px;
-}
-.dropDown-symbol{
-    transition: 2s;
-    cursor: pointer;
-}
-.currencyClose, .currencyOpen{
-    cursor: pointer;
-    transition: 0.3s;
+.header-currency-cart {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 }
 
-.header-symbol-div{
-    display: flex;
+.header-symbol {
+  margin-right: 22px;
+}
+.dropDown-symbol {
+  transition: 2s;
+  cursor: pointer;
+}
+.currencyClose,
+.currencyOpen {
+  cursor: pointer;
+  transition: 0.3s;
 }
 
-.symbol{
-    margin-top: 10px;
-    width: 114px;
-    box-shadow: 0px 0px 77px -37px;
-    display: flex;
-    flex-direction: column;
-    animation: growDown 500ms ease-out;
-    transform-origin: top center;
-    position: absolute;
-    margin-left: -30px;
-    background-color: white;
-    z-index: 2;
+.header-symbol-div {
+  display: flex;
 }
 
-.symbol p{
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 18px;
-    padding-top: 8px;
-    padding-bottom: 8px;
+.symbol {
+  margin-top: 10px;
+  width: 114px;
+  box-shadow: 0px 0px 77px -37px;
+  display: flex;
+  flex-direction: column;
+  animation: growDown 500ms ease-out;
+  transform-origin: top center;
+  position: absolute;
+  margin-left: -30px;
+  background-color: white;
+  z-index: 2;
 }
 
-.symbol p:hover{
-    background-color: #EEEEEE ;
-    transition: 0.5s;
+.symbol p {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  padding-top: 8px;
+  padding-bottom: 8px;
 }
 
-
-.cart-logo{
-    background: url('../svg/cartLogo.svg') 100% / 91% no-repeat ;
-    height: 20px;
-    width: 20px;
-    cursor: pointer;
+.symbol p:hover {
+  background-color: #eeeeee;
+  transition: 0.5s;
 }
 
-.myBag{
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 160%;
+.cart-logo {
+  background: url("../svg/cartLogo.svg") 100% / 91% no-repeat;
+  height: 20px;
+  width: 20px;
+  cursor: pointer;
 }
 
-.cart-dropDown{
-    height: 677px;
-    width: 325px;
-    background-color: white;
-    position: absolute;
-    margin-top: 30px;
-    animation: growDown 500ms;
-    transform-origin: top center;
-    z-index: 3;
-    right: 0px;
-    margin-right: 10%;
-    display: flex;
-    flex-direction: column;
-    padding-left: 16px;
-    padding-right: 16px;
+.myBag {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 160%;
 }
 
-.cart-dropDown-product{
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    overflow-y: scroll;
-    margin-top: 32px;
-    margin-bottom: 32px;
+.cart-dropDown {
+  height: 677px;
+  width: 325px;
+  background-color: white;
+  position: absolute;
+  margin-top: 30px;
+  animation: growDown 500ms;
+  transform-origin: top center;
+  z-index: 3;
+  right: 0px;
+  margin-right: 10%;
+  display: flex;
+  flex-direction: column;
+  padding-left: 16px;
+  padding-right: 16px;
 }
 
-.cart-dropDown-product-container{
-    display: grid;
-    grid-template-columns: 60% 10% 30%;
-    margin-bottom: 40px;
-    min-height: fit-content;
+.cart-dropDown-product {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow-y: scroll;
+  margin-top: 32px;
+  margin-bottom: 32px;
 }
 
-.cart-dropDown-product-counter{
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-}
-.cart-dropDown-product-counter-plus, .cart-dropDown-product-counter-minus{
-    border: 1px solid rgb(34, 32, 31);
-    height: 23px;
-    width: 23px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
+.cart-dropDown-product-container {
+  display: grid;
+  grid-template-columns: 60% 10% 30%;
+  margin-bottom: 40px;
+  min-height: fit-content;
 }
 
-.price, .cart-dropDown-product-info-productName{
-    margin-top: 7px;
+.cart-dropDown-product-counter {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
-.cart-dropDown-product-image-div{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.cart-dropDown-product-image-div img{
-    width: 100%;
-}
-
-.cart-dropDown-price-total{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-
-
-.cartShadow{
-    position: absolute;
-    width: 100%;
-    height: 120vw;
-    left: 0;
-    top: 80px;
-    background-color: black;
-    opacity: 0.1;
-    z-index: 2;
+.cart-dropDown-product-counter-plus,
+.cart-dropDown-product-counter-minus {
+  border: 1px solid rgb(34, 32, 31);
+  height: 23px;
+  width: 23px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
 }
 
-
-.header-cart{
-    height: 80px;
-    width: 300px;
-    overflow-x: hidden;
-    display: contents;
-    align-items: center;
-    background-color: rgb(0, 0, 0);
+.price,
+.cart-dropDown-product-info-productName {
+  margin-top: 7px;
+}
+.cart-dropDown-product-image-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.bagItemsCounter{
-    position: absolute;
-    background-color: black;
-    color: white;
-    border-radius: 100%;
-    width: 15px;
-    height: 15px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: 11px;
-    margin-top: -7px;
-}
-.headerCartButtons{
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 33px;
-}
-.headerCartButtons button{
-    width: 140px;
-    height: 43px;
-    cursor: pointer;
-    border: none;
-}
-.cart-dropDown-checkout{
-    background-color: #5ECE7B;
-    color: white;
-    border: none;
+.cart-dropDown-product-image-div img {
+  width: 100%;
 }
 
-.currencyOpen{
-    background: url('../svg/down.svg') 100% / 50% no-repeat;
-    height: 20px;
-    align-items: center;
-    width: 20px;
-    display: flex;
+.cart-dropDown-price-total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.currencyClose{
-    background: url('../svg/down.svg') 17% / 50% no-repeat;
-    transform: rotate(180deg);
-    height: 20px;
-    align-items: center;
-    width: 20px;
-    display: flex;
+.cartShadow {
+  position: absolute;
+  width: 100%;
+  height: 120vw;
+  left: 0;
+  top: 80px;
+  background-color: black;
+  opacity: 0.1;
+  z-index: 2;
 }
 
+.header-cart {
+  height: 80px;
+  width: 300px;
+  overflow-x: hidden;
+  display: contents;
+  align-items: center;
+  background-color: rgb(0, 0, 0);
+}
+
+.bagItemsCounter {
+  position: absolute;
+  background-color: black;
+  color: white;
+  border-radius: 100%;
+  width: 15px;
+  height: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 11px;
+  margin-top: -7px;
+}
+.headerCartButtons {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 33px;
+}
+.headerCartButtons button {
+  width: 140px;
+  height: 43px;
+  cursor: pointer;
+  border: none;
+}
+.cart-dropDown-checkout {
+  background-color: #5ece7b;
+  color: white;
+  border: none;
+}
+
+.currencyOpen {
+  background: url("../svg/down.svg") 100% / 50% no-repeat;
+  height: 20px;
+  align-items: center;
+  width: 20px;
+  display: flex;
+}
+
+.currencyClose {
+  background: url("../svg/down.svg") 17% / 50% no-repeat;
+  transform: rotate(180deg);
+  height: 20px;
+  align-items: center;
+  width: 20px;
+  display: flex;
+}
 
 @keyframes growDown {
-    0% {
-        transform: scaleY(0)
-    }
-    90% {
-        transform: scaleY(1.01)
-    }
-    100% {
-        transform: scaleY(1)
-    }
+  0% {
+    transform: scaleY(0);
+  }
+  90% {
+    transform: scaleY(1.01);
+  }
+  100% {
+    transform: scaleY(1);
+  }
 }
-
 
 @media only screen and (max-width: 900px) {
-    .header{
-        display: flex;
-        justify-content: space-between;
-    }
+  .header {
+    display: flex;
+    justify-content: space-between;
+  }
 
-    .header-logo{
-        display: none
-    }
+  .header-logo {
+    display: none;
+  }
 }
-

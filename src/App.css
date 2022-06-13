@@ -1,17 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway');
+@import url("https://fonts.googleapis.com/css2?family=Raleway");
 
-
-body{
+body {
   padding-left: 10%;
-  padding-right: 10%; 
-  font-family: 'Raleway';
+  padding-right: 10%;
+  font-family: "Raleway";
 }
 
 a {
-      text-decoration: none;
-      color: black;
+  text-decoration: none;
+  color: black;
 }
-
 
 .spin::before {
   animation: 1.5s linear infinite spinner;
@@ -24,11 +22,10 @@ a {
   width: 40px;
   position: absolute;
   top: 50%;
-  left:50%;
+  left: 50%;
   transform: translate3d(-50%, -50%, 0);
   will-change: transform;
 }
-
 
 @keyframes spinner {
   0% {
@@ -39,11 +36,11 @@ a {
   }
 }
 
-@keyframes slide{
-  0%{
-      background-position-x: 0px;
+@keyframes slide {
+  0% {
+    background-position-x: 0px;
   }
-  100%{
-    background-position-x: -9054px; 
+  100% {
+    background-position-x: -9054px;
   }
 }

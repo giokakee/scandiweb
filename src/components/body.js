@@ -1,71 +1,77 @@
 import { Component } from "react";
-import { Route, Routes, Navigate, useLocation } from "react-router-dom";
+import { Route, Routes, Navigate, useParams } from "react-router-dom";
 import Categories from "./body.categories";
 import SingleProduct from "./productPage/singleproduct";
-import ProductCart from './cart/cart'
+import ProductCart from "./cart/cart";
 import axios from "axios";
-import { ALL_PRODUCT_ID, CATEGORIES, URL } from "../gql/gql";
-
+import { CATEGORIES, URL } from "../gql/gql";
 
 const CategoryWithPath = () => {
+  const { categoryName } = useParams();
+  return <Categories category={categoryName} />;
+};
 
-    const {pathname} = useLocation()
-    return(
-        <Categories category={pathname.slice(1)} />
-    )
-}
-
+const ProductWithParams = () => {
+  const { productId } = useParams();
+  return <SingleProduct id={productId} />;
+};
 
 class Body extends Component {
-    constructor(props){
-        super(props)
+  constructor(props) {
+    super(props);
 
-        this.state = {
-            categories: [],
-            loading: true,
-            productsId: []
-        }
+    this.state = {
+      categories: [],
+      loading: true,
+    };
+  }
+
+  async componentDidMount() {
+    try {
+      let data = await axios.post(URL, {
+        query: CATEGORIES,
+      });
+
+      this.setState({
+        categories: data.data.data.categories,
+        loading: false,
+      });
+    } catch (err) {
+      console.log({ message: err.message });
     }
+  }
 
-    async componentDidMount(){
-        try{
-         let data = await axios.post(URL, {
-             query: CATEGORIES
-           })
+  render() {
+    return (
+      <div>
+        {this.state.loading ? (
+          <div className='spin'></div>
+        ) : (
+          <Routes>
+            <Route
+              path='/'
+              element={<Navigate to={`/${this.state.categories[0].name}`} />}
+            />
+            {this.state.categories.map((category, i) => {
+              return (
+                <Route
+                  key={i}
+                  path={`/:categoryName`}
+                  element={<CategoryWithPath />}
+                />
+              );
+            })}
 
-           let productsId = await axios.post(URL, {
-            query: ALL_PRODUCT_ID,
-            variables: {title: 'all'}
-          })
-           this.setState({categories: data.data.data.categories, productsId: productsId.data.data.category.products , loading: false})
-
-        }catch(err){
-            console.log({message: err.message})
-        }
-     }
-
-    render(){
-        return( 
-            <div>
-                {this.state.loading ? <div className="spin"></div>
-                                    : <Routes>
-                                        <Route path="/" element={<Navigate to={`/${this.state.categories[0].name}`} />} />
-                                        {this.state.categories.map((category, i) => {
-                                            return(
-                                                <Route key={i} path={`/${category.name}`} element={<CategoryWithPath />} />
-                                            )
-                                        })}
-                                        
-                                              {this.state.productsId.map((product, i) => {
-                                                        return(
-                                                            <Route key={i} path={`/:categoryname/${product.id}`} element={<SingleProduct id={product.id} />} />
-                                                        )
-                                                    })}
-                                            <Route path="/cart"  element={<ProductCart />} />
-                                        </Routes>}
-            </div>
-        )
-    }
+            <Route
+              path={`/:categoryname/:productId`}
+              element={<ProductWithParams />}
+            />
+            <Route path='/cart' element={<ProductCart />} />
+          </Routes>
+        )}
+      </div>
+    );
+  }
 }
 
-export default Body
+export default Body;

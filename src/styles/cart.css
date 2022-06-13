@@ -1,122 +1,115 @@
-.cart-product-container{
-    display: flex;
-    justify-content: space-between;
-    padding-top: 25px;
-    padding-bottom: 25px;
-    border-top: 1px solid #E5E5E5;
-    border-bottom: 1px solid #E5E5E5;
-
+.cart-product-container {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  border-top: 1px solid #e5e5e5;
+  border-bottom: 1px solid #e5e5e5;
 }
 
 .cart-product-brand {
-    font-family: 'Raleway';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 30px;
-    line-height: 27px;
-    margin-bottom: 16px;
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 27px;
+  margin-bottom: 16px;
 }
 
-.cart-product-name{
-    font-family: 'Raleway';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 30px;
-    line-height: 27px;
+.cart-product-name {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 27px;
 }
 
-.cart-product-price{
-    font-family: 'Raleway';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 24px;
-    line-height: 24px;
+.cart-product-price {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 24px;
 }
 
-.cart-bottom{
-    display: flex;
-    justify-content: flex-start;
-    flex-direction: column;
-    width: 20%;
-    min-width: 277px;
-    margin-top: 33px;
-    margin-bottom: 10rem;
+.cart-bottom {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  width: 20%;
+  min-width: 277px;
+  margin-top: 33px;
+  margin-bottom: 10rem;
 }
 .cart-bottom p {
-    font-family: 'Raleway';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 24px;
-    line-height: 28px;
-    color: black;
-    margin: 0px;
-    margin-bottom: 7px;
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+  color: black;
+  margin: 0px;
+  margin-bottom: 7px;
 }
 
 .cart-bottom span {
-    font-family: 'Raleway';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 24px;
-    line-height: 28px;
-    color: black;
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 28px;
+  color: black;
 }
 
-.cart-bottom button{
-    width: 100%;
-    height: 43px;
-    border: none;
-    background-color: #5ECE7B;
-    color: white;
-    margin-top: 16px;
+.cart-bottom button {
+  width: 100%;
+  height: 43px;
+  border: none;
+  background-color: #5ece7b;
+  color: white;
+  margin-top: 16px;
 }
 
-
-
-
-.cart-product-counter-image{
-    display: flex;
-    justify-content: space-between;
+.cart-product-counter-image {
+  display: flex;
+  justify-content: space-between;
 }
 
-.cart-product-changePhoto{
-    position: inherit;
-    width: 64px;
-    height: 20px;
-    margin-bottom: 24px;
-    margin-top: -43px;
-    display: flex;
-    margin-left: 124px;
-    justify-content: space-between;
+.cart-product-changePhoto {
+  position: inherit;
+  width: 64px;
+  height: 20px;
+  margin-bottom: 24px;
+  margin-top: -43px;
+  display: flex;
+  margin-left: 124px;
+  justify-content: space-between;
 }
-.cart-product-changePhoto button{
-    border: 1px solid black;
-    border: none;
-    background-color: black;
-    color: white;
-    opacity: 0.5;
-    cursor: pointer;
-}
-
-
-
-.cart-product-counter-image-container{
-    display: flex;
-    flex-direction: column;
-    width: 200px;
-    margin-left: 25px;
-    justify-content: center;
-}
-.cart-product-counter-image-container img{
-    width: 100%;
-    height: auto;
+.cart-product-changePhoto button {
+  border: 1px solid black;
+  border: none;
+  background-color: black;
+  color: white;
+  opacity: 0.5;
+  cursor: pointer;
 }
 
-
-.cart-bottom div{
-    display: flex;
+.cart-product-counter-image-container {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  margin-left: 25px;
+  justify-content: center;
+}
+.cart-product-counter-image-container img {
+  width: 100%;
+  height: auto;
 }
 
-.cart-bottom div p{
-    width: 107px;
+.cart-bottom div {
+  display: flex;
+}
+
+.cart-bottom div p {
+  width: 107px;
 }
